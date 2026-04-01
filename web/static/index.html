@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dots and Boxes MVP</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="sidebar">
+        <h1>Dots and Boxes</h1>
+
+        <div class="panel">
+          <label>
+            Rows
+            <select id="rowsSelect">
+              <option value="2">2</option>
+              <option value="3" selected>3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </label>
+
+          <label>
+            Cols
+            <select id="colsSelect">
+              <option value="2">2</option>
+              <option value="3" selected>3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </label>
+
+          <label>
+            Bot
+            <select id="botSelect">
+              <option value="random">Random</option>
+              <option value="greedy">Greedy</option>
+              <option value="minimax_d2">Minimax depth 2</option>
+              <option value="minimax_d3">Minimax depth 3</option>
+              <option value="alphabeta_d2">AlphaBeta depth 2</option>
+              <option value="alphabeta_d3">AlphaBeta depth 3</option>
+              <option value="graphical_nn">Graphical Neural Network</option>
+            </select>
+          </label>
+
+          <label class="checkbox-row">
+            <input type="checkbox" id="humanStartsCheckbox" checked />
+            You start
+          </label>
+
+          <button id="newGameBtn">New Game</button>
+        </div>
+
+        <div class="panel">
+          <h2>Status</h2>
+          <p id="statusText">Create a game to begin.</p>
+          <p id="scoreText">Scores: -</p>
+          <p id="turnText">Turn: -</p>
+        </div>
+
+        <div class="panel">
+          <h2>Moves</h2>
+          <div id="moveLog" class="move-log"></div>
+        </div>
+      </div>
+
+      <div class="board-area">
+        <svg id="boardSvg" class="board-svg" viewBox="0 0 700 700"></svg>
+      </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
